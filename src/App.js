@@ -1,12 +1,21 @@
 import React from 'react';
-import ExpenseItem from './components/ExpenseItem';
-import ExerciseComponent from './ExerciseComponent';
-
+//import ExpenseItem from './components/ExpenseItem';
+//import ExerciseComponent from './ExerciseComponent';
+import Navbar from './components/Navbar';
+import User from './components/User';
 import './style.css';
 
 
 export default function App() {
-  return <ExerciseComponent />
+  return(
+    <div>
+      <Navbar></Navbar>
+      <hr/>
+      <User></User>
+    </div>
+  );
+  // <ExerciseComponent />;
+  
        //return <p>deneme</p>
 //    const [messageValidity, setMessageValidity] = React.useState('Invalid');
 //    
