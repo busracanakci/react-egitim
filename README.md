@@ -1,6 +1,8 @@
 # HAFTALIK REACT RAPORU 
 
 <strong> HAFTA 1 </strong>
+
+
 React’ın dom yapısında sanal bir dom kullandığını böylece daha hızlı olduğunu öğrendim. Eğer sayfanın bir bölgesinde bir istek olursa o zaman gerçek dom ve sanal domda bu alanda güncelleme olduğundan sayfalarda yavaşlık olmadığını öğrendim. 
 
 

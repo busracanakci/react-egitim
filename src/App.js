@@ -11,7 +11,12 @@ export default function App() {
     <div>
       <Navbar></Navbar>
       <hr/>
-      <User></User>
+      <User
+      name = "Büşra Çanakçı"
+      task = "React Eğitim"
+      time = "12686 dk"
+      />
+      
     </div>
   );
   // <ExerciseComponent />;

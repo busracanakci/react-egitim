@@ -1,15 +1,16 @@
-import React from 'react';
-
-function User () {
-    return (
-        <div>
-            <ul>
-                <li>İsim: Büşra Çanakçı</li>
-                <li>Görev: React Eğitim</li>
-                <li>Süre: 89526 dk</li>
-            </ul>
-        </div>
-    )
+import React, { Component } from 'react';
+class User extends Component {
+    render(){
+        return (
+            <div>
+                <ul>
+                    <li>İsim: {this.props.name}</li>
+                    <li>Görev:{this.props.task} </li>
+                    <li>Süre:{this.props.time}</li>
+                </ul>
+            </div>
+        );
+    }
+    
 }
-
 export default User;
