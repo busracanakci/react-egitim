@@ -1,23 +1,80 @@
-import React from 'react';
+import React , {useState} from 'react';
 //import ExpenseItem from './components/ExpenseItem';
 //import ExerciseComponent from './ExerciseComponent';
-import Navbar from './components/Navbar';
-import User from './components/User';
+//import Navbar from './components/Navbar';
+//import User from './components/User';
 import './style.css';
 
 
 export default function App() {
+  const [newItem,setNewItem]=useState("");
+  const [items,setItems] = useState([]);
+
+
+  function addItem(){
+    if(!newItem){
+      alert("Yapılacaklar listesine bir içerik girmediniz");
+      return;
+    }
+
+    const item = {
+      id: Math.floor(Math.random()*1000),
+      value : newItem
+    };
+
+    setItems((oldList) => [...oldList, item]);
+    setNewItem("");
+
+  }
+  function remove(id){
+    const newArray = items.filter(item => item.id !== id);
+    setItems(newArray);
+  }
   return(
-    <div>
-      <Navbar></Navbar>
-      <hr/>
-      <User
-      name = "Büşra Çanakçı"
-      task = "React Eğitim"
-      time = "12686 dk"
+    <div className="text-color">
+      <h1 className='div-center'>Yapılacaklar Listesi</h1>
+      <div className='div-center'>
+      <form onSubmit={(e)=> {
+        e.preventDefault();
+        addItem();
+      }}>
+      <input className='text-color'
+      type="text"
+      value={newItem}
+      onChange={e => setNewItem(e.target.value)}
       />
+      </form>
+      <button onClick={(e) => addItem()}>Ekle</button>
+
+      </div>
+      <div className='div-center'>
+      <ul >
+       {items.map(item => {
+        return <li className='list' key={item.id}> {item.value} <button onClick={e => remove(item.id)}>X</button>  </li>
+       })}
+      </ul>
+      </div>
       
     </div>
+    //<div>
+    //  <Todo></Todo>
+    //</div>
+    //<div>
+    //  
+    //  <Navbar></Navbar>
+    //  <hr/>
+    //  <User
+    //  name = "Büşra Çanakçı"
+    //  task = "React Eğitim"
+    //  time = "12686 dk"
+    //  />
+    //   <User
+    //  name = "Deneme deneme"
+    //  task = "React Eğitim"
+    //  time = "12686 dk"
+    //  />
+    //  
+    //</div>
   );
   // <ExerciseComponent />;
   

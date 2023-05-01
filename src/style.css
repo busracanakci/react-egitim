@@ -2,8 +2,8 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 3rem;
-    background-color: #2d2c2c;
-    color: #959090;
+    background-color: #ffffff;
+    color: #ffffff;
 }
 
 label {
@@ -14,12 +14,48 @@ label {
 input {
     font: inherit;
     padding: 0.5rem;
-    background-color: #474545;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
     border-radius: 4px;
     color: white;
+    margin-right: 2px;
 }
 #counter {
-    color: #d7adff;
+    color: #ffffff;
     font-size: 3rem;
+}
+button {
+    margin-left: 2px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #dbcbcb;
+    color: rgb(243, 166, 50);
+    background-color: #fdf5f0;
+    font-weight: bold;
+}
+
+.title{
+    color:rgb(243, 166, 50); 
+    font-weight: bold;
+    font-size: large;
+}
+.text-color{
+    color:black;
+   
+    
+}
+.list{
+    list-style-type: none;
+    border-style: solid;
+    border-color: rgb(243, 166, 50); 
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+.div-center{
+    display: flex;
+    justify-content: center;
 }
